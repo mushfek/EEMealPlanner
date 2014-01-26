@@ -1,0 +1,71 @@
+#table-container {
+    position: relative;
+    top: 30%;
+    height: 10em;
+    width: 100%;
+    text-align: center;
+    margin-top: -5em;
+    margin: auto;
+}
+
+#meal-list {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 50%;
+    align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#meal-list th {
+    font-size: 15px;
+    text-align: left;
+    color: #039;
+    border-bottom: 2px solid #6678b1;
+    padding: 10px 8px;
+}
+
+#meal-list td {
+    text-align: left;
+    color: #669;
+}
+
+#headings {
+    color: #7f829f;
+    text-align: center;
+}
+
+#login-form {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    width: 30em;
+    height: 18em;
+    margin-top: -9em;
+    margin-left: -15em;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+}
+
+#home-menu-ver {
+    position: absolute;
+    left: 450px;
+    top: 200px;
+    text-align: center;
+    margin: auto;
+    z-index: 200;
+}
+
+#home-menu-hor {
+    position: relative;
+    text-align: center;
+}
+
+#meal-edit-field {
+    position: absolute;
+    text-align: center;
+    left: 450px;
+    top: 150px;
+    margin: auto;
+}
+

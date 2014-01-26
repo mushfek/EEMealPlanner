@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Edit Meal | Therap Meal Planner</title>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+
+<h:body>
+    <div>
+        <h:form id="editForm">
+            <p:panelGrid columns="2">
+                <f:facet name="header">
+                    Meal Edit
+                </f:facet>
+
+                <h:outputLabel for="breakfast" value="BreakFast "/>
+                <p:inputText id="breakfast" value="#{mealController.meal.breakfast}" label="breakfast"/>
+
+                <h:outputLabel for="lunch" value="Lunch "/>
+                <p:inputText id="lunch" value="#{mealController.meal.lunch}" label="lunch"/>
+
+                <h:outputLabel for="snack" value="Snacks "/>
+                <p:inputText id="snack" value="#{mealController.meal.snacks}" label="snack"/>
+
+                <f:facet name="footer">
+                    <h:commandButton action="#{mealController.update}" value="Update"/>
+                </f:facet>
+            </p:panelGrid>
+        </h:form>
+    </div>
+</h:body>
+</html>

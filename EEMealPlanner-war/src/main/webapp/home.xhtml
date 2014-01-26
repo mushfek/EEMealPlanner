@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Home | Therap Meal Planner</title>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+<h:body>
+    <div>
+        <h:form>
+            <h:commandLink action="#{authController.logout}" value="Log Out"/>
+        </h:form>
+    </div>
+    <div style="text-align: center">
+        <h2 id="headings">Therap Meal Planner</h2>
+        <h:form id="displayMeal">
+            <p:dataTable var="meal" value="#{mealController.mealList}">
+                <p:column headerText="Day">
+                    <h:outputText value="#{meal.day}"/>
+                </p:column>
+
+                <p:column headerText="Breakfast">
+                    <h:outputText value="#{meal.breakfast}"/>
+                </p:column>
+
+                <p:column headerText="Lunch">
+                    <h:outputText value="#{meal.lunch}"/>
+                </p:column>
+
+                <p:column headerText="Snacks">
+                    <h:outputText value="#{meal.snacks}"/>
+                </p:column>
+
+                <p:column rendered="#{mealController.user.type == 0}" headerText="Edit">
+                    <h:commandLink action="edit" value="Edit">
+                        <f:setPropertyActionListener target="#{mealController.meal}" value="#{meal}"/>
+                    </h:commandLink>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </div>
+</h:body>
+</html>
